@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Client Feedback Survey | Web Development + Design Inc.</title>
+  </head>
+  <body>
+    <div id="container">
+      <header class="header">
+        <h1 id="title">Client Feedback Survey</h1>
+        <p id="description" class="description">
+          Thank you for choosing Web Development + Design Inc. for your web
+          development needs. We value your feedback and would appreciate it if
+          you could take a few minutes to complete this survey. Your responses
+          will help us improve our services.
+        </p>
+      </header>
+      <main>
+        <form id="survey-form">
+          <section>
+            <h2 class="section-heading">Personal Information</h2>
+
+            <div class="form-group">
+              <label for="name" id="name-label">Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="e.g. John Doe"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email" id="email-label">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="e.g. johndoe@example.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label id="number-label" for="number">Age</label>
+              <input
+                id="number"
+                name="number"
+                type="number"
+                min="18"
+                max="100"
+                placeholder="Enter your age"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="dropdown"
+                >What industry best describes your organization?</label
+              >
+              <select name="industry" id="dropdown">
+                <option value="" disabled selected>Select your industry</option>
+                <option value="agriculture">Agriculture</option>
+                <option value="banking/finance">Banking/Finance</option>
+                <option value="construction">Construction</option>
+                <option value="education">Education</option>
+                <option value="healthcare">Healthcare</option>
+                <option value="information-technology">
+                  Information Technology
+                </option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="non-profit">Non-Profit</option>
+                <option value="retail">Retail</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="section-heading">Service Evaluation</h2>
+
+            <div class="form-group">
+              <p class="p-heading">
+                1. How satisfied are you with the overall service by Web
+                Development + Design Inc.?
+              </p>
+
+              <label for="very-satisfied" class="radio-display"
+                ><input
+                  id="very-satisfied"
+                  name="satisfaction"
+                  value="very-satisfied"
+                  type="radio"
+                  checked
+                />Very Satisfied</label
+              >
+
+              <label for="satisfied" class="radio-display"
+                ><input
+                  id="satisfied"
+                  name="satisfaction"
+                  value="satisfied"
+                  type="radio"
+                />Satisfied</label
+              >
+
+              <label for="neutral" class="radio-display"
+                ><input
+                  id="neutral"
+                  name="satisfaction"
+                  value="neutral"
+                  type="radio"
+                />Neutral</label
+              >
+
+              <label for="dissatisfied" class="radio-display"
+                ><input
+                  id="dissatisfied"
+                  name="satisfaction"
+                  value="dissatisfied"
+                  type="radio"
+                />Dissatisfied</label
+              >
+
+              <label for="very-dissatisfied" class="radio-display"
+                ><input
+                  id="very-dissatisfied"
+                  name="satisfaction"
+                  value="very-dissatisfied"
+                  type="radio"
+                />Very Dissatisfied</label
+              >
+            </div>
+
+            <div class="form-group">
+              <p class="p-heading">
+                2. Please rate the following aspects of our service on a scale
+                of 1 to 5 (1 being the lowest and 5 being the highest):
+              </p>
+
+              <label for="communication"
+                >Communication<input
+                  id="communication"
+                  name="communication"
+                  type="range"
+                  min="1"
+                  max="5"
+                  list="values"
+              /></label>
+
+              <label for="technical-expertise"
+                >Technical Expertise<input
+                  id="technical-expertise"
+                  name="technical-expertise"
+                  type="range"
+                  min="1"
+                  max="5"
+                  list="values"
+              /></label>
+
+              <label for="project-timeliness"
+                >Project Timeliness<input
+                  id="project-timeliness"
+                  name="project-timeliness"
+                  type="range"
+                  min="1"
+                  max="5"
+                  list="values"
+              /></label>
+
+              <label for="problem-resolution"
+                >Problem Resolution<input
+                  id="problem-resolution"
+                  name="problem-resolution"
+                  type="range"
+                  min="1"
+                  max="5"
+                  list="values"
+              /></label>
+
+              <datalist id="values">
+                <option value="1" label="1"></option>
+                <option value="2" label="2"></option>
+                <option value="3" label="3"></option>
+                <option value="4" label="4"></option>
+                <option value="5" label="5"></option>
+              </datalist>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="section-heading">Project Specification</h2>
+            <div class="form-group">
+              <p class="p-heading">
+                1. Which services did Web Development + Design Inc. provide for
+                you? (Select all that apply):
+              </p>
+
+              <label for="website-development" class="radio-display"
+                ><input
+                  id="website-development"
+                  name="website-development"
+                  value="website-development"
+                  type="checkbox"
+                />Website Development</label
+              >
+
+              <label for="website-design" class="radio-display"
+                ><input
+                  id="website-design"
+                  name="website-design"
+                  value="website-design"
+                  type="checkbox"
+                />Website Design</label
+              >
+
+              <label for="e-commerce-solutions" class="radio-display"
+                ><input
+                  id="e-commerce-solutions"
+                  name="e-commerce-solutions"
+                  value="e-commerce-solutions"
+                  type="checkbox"
+                />E-Commerce Solutions</label
+              >
+
+              <label for="maintenance-and-support" class="radio-display"
+                ><input
+                  id="maintenance-and-support"
+                  name="maintenance-and-support"
+                  value="maintenance-and-support"
+                  type="checkbox"
+                />Maintenance & Support</label
+              >
+            </div>
+
+            <div class="form-group">
+              <p class="p-heading">
+                2. How would you rate the quality of the deliverables provided
+                by Web Development + Design Inc.?
+              </p>
+
+              <label for="excellent" class="radio-display"
+                ><input
+                  id="excellent"
+                  name="quality"
+                  value="excellent"
+                  type="radio"
+                  checked
+                />Excellent</label
+              >
+
+              <label for="good" class="radio-display"
+                ><input
+                  id="good"
+                  name="quality"
+                  value="good"
+                  type="radio"
+                />Good</label
+              >
+
+              <label for="average" class="radio-display"
+                ><input
+                  id="average"
+                  name="quality"
+                  value="average"
+                  type="radio"
+                />Average</label
+              >
+
+              <label for="below-average" class="radio-display"
+                ><input
+                  id="below-average"
+                  name="quality"
+                  value="below-average"
+                  type="radio"
+                />Below Average</label
+              >
+
+              <label for="poor" class="radio-display"
+                ><input
+                  id="poor"
+                  name="quality"
+                  value="poor"
+                  type="radio"
+                />Poor</label
+              >
+            </div>
+          </section>
+
+          <section>
+            <h2 class="section-heading">Additional Feedback</h2>
+
+            <div class="form-group">
+              <p class="p-heading">
+                1. Do you have any additional comments or suggestions for Web
+                Development + Design Inc.?
+              </p>
+              <textarea
+                name="comments"
+                rows="3"
+                cols="30"
+                placeholder="Enter your comment here..."
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <p class="p-heading">
+                2. How likely are you to recommend Web Development + Design Inc.
+                to others?
+              </p>
+
+              <label for="very-likely" class="radio-display"
+                ><input
+                  id="very-likely"
+                  name="recommend"
+                  value="very-likely"
+                  type="radio"
+                  checked
+                />Very Likely</label
+              >
+
+              <label for="likely" class="radio-display"
+                ><input
+                  id="likely"
+                  name="recommend"
+                  value="likely"
+                  type="radio"
+                />Likely</label
+              >
+
+              <label for="not-sure" class="radio-display"
+                ><input
+                  id="not-sure"
+                  name="recommend"
+                  value="not-sure"
+                  type="radio"
+                />Not Sure</label
+              >
+
+              <label for="unlikely" class="radio-display"
+                ><input
+                  id="unlikely"
+                  name="recommend"
+                  value="unlikely"
+                  type="radio"
+                />Unlikely</label
+              >
+
+              <label for="very-unlikely" class="radio-display"
+                ><input
+                  id="very-unlikely"
+                  name="recommend"
+                  value="very-unlikely"
+                  type="radio"
+                />Very Unlikely</label
+              >
+            </div>
+            <button type="submit" id="submit">Submit</button>
+          </section>
+        </form>
+      </main>
+    </div>
+    <footer>
+      <p class="p-footer">
+        &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Web Development + Design Inc.
+      </p>
+    </footer>
+  </body>
+</html>

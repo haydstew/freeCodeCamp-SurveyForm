@@ -1,0 +1,149 @@
+/* Colours stored in variables */
+:root {
+  --black: #212529;
+  --white: #f8f9fa;
+}
+
+/* Global reset of HTML document */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  line-height: 1.5;
+  font-family: "Roboto Mono", monospace;
+}
+
+/* Set smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--black);
+}
+
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+form {
+  padding: 0 2rem;
+}
+
+.header {
+  padding: 3rem;
+  color: var(--white);
+  text-align: center;
+}
+
+#title {
+  font-size: 3.6rem;
+  margin-bottom: 1rem;
+}
+
+#description {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+section {
+  padding: 4rem;
+  margin: 0 0 2rem;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 0.5rem;
+}
+
+.section-heading {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+label,
+p {
+  font-size: 1.8rem;
+}
+
+.p-heading {
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 3rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="range"],
+input[type="number"],
+select {
+  display: block;
+  width: 100%;
+  height: 4rem;
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--black);
+}
+
+option {
+  font-size: 1.4rem;
+}
+
+.radio-display {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 1rem;
+}
+
+input[type="radio"],
+input[type="checkbox"],
+input[type="range"] {
+  accent-color: var(--black);
+}
+
+input[type="range"] {
+  margin-bottom: 2rem;
+}
+
+textarea {
+  display: block;
+  font-size: 1.4rem;
+  width: 100%;
+  height: 15rem;
+  padding: 0.5rem;
+  border: 1px solid var(--black);
+  border-radius: 0.5rem;
+}
+
+button {
+  width: 100%;
+  border: 1px solid var(--black);
+  border-radius: 0.5rem;
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 1.8rem;
+  padding: 1rem;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: white;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.p-footer {
+  color: var(--white);
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 1rem 2rem 2rem;
+}
